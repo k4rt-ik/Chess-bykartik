@@ -1,0 +1,27 @@
+.Board{
+background-color: black;
+display: grid;
+grid-template-columns: repeat(8, 1fr);
+
+}
+
+.tile{
+    aspect-ratio: 1/1;
+    border: 1px solid black;
+}
+
+.row-container{
+    display: grid;
+    
+}
+
+.tile{
+    padding: 10px;
+}
+
+.white-tile{
+    background-color: var(--light-tile);
+}
+.black-tile{
+    background-color: var(--dark-tile);
+}
