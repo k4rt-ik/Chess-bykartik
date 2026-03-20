@@ -1,10 +1,8 @@
 import './Board.css'
 
-
 const Board = () =>{
     const rows = Array(8).fill().map((_, i) => String.fromCharCode(65 + i))
     const files = Array(8).fill().map((_, i) => 8 - i)
-
     // placing the peices on the board
 
 
@@ -21,6 +19,7 @@ const Board = () =>{
                             <div key={j} className={`tile ${tileColor}`}>
                                 {row}{file}
                             </div>
+                            
                         );
                     })}
                 </div>
