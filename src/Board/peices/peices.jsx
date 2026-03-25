@@ -39,18 +39,7 @@ const Peices = () => {
     position[7][6] = wn
     position[7][7] = wr
 
-    return (
-        <div className='peice'>
-  {position.map((row, i) => 
-    row.map((cell, j) => (
-      <span key={`${i}-${j}`} className='peice-container'>
-        {/* Only render the img if the cell actually contains a piece */}
-        {cell && <img src={cell} alt='' className='peice-img' />}
-      </span>
-    ))
-  )}
-</div>
-    )
+    return <div className='peice'></div>
 }
 
 export default Peices

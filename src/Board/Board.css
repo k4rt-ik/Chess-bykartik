@@ -1,27 +1,56 @@
-.Board{
-background-color: black;
-display: grid;
-grid-template-columns: repeat(8, 1fr);
-
+/* Container for everything (Files + Board) */
+.game-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
 }
 
-.tile{
-    aspect-ratio: 1/1;
-    border: 1px solid black;
+/* Vertical labels (8, 7, 6...) */
+.files {
+  display: flex;
+  flex-direction: column;
+  height: 400px; /* This must match your board height */
+  justify-content: space-around;
 }
 
-.row-container{
-    display: grid;
-    
+/* The actual Chess Board */
+.Board {
+  display: grid;
+  grid-template-columns: repeat(8, 50px); /* Fixed size makes alignment easier */
+  grid-template-rows: repeat(8, 50px);
+  border: 2px solid #333;
 }
 
-.tile{
-    padding: 10px;
+.tile {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px; /* Coordinates inside tile */
 }
 
-.white-tile{
+/* Horizontal labels (A, B, C...) */
+.rows {
+  display: grid;
+  grid-template-columns: repeat(8, 50px); /* Matches the board columns exactly */
+  margin-top: 5px;
+}
+
+.row-item {
+  text-align: center;
+  font-weight: bold;
+}
+
+ .white-tile{
+
     background-color: var(--light-tile);
+
 }
+
 .black-tile{
+
     background-color: var(--dark-tile);
-}
+
+} 
