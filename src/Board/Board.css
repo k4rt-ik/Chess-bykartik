@@ -49,6 +49,16 @@
 
 }
 
+.piece {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.piece:hover {
+  background-color: red;
+}
+
 .black-tile{
 
     background-color: var(--dark-tile);

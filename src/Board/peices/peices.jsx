@@ -12,34 +12,21 @@ import wk from './wk.png'
 import wq from './wq.png'
 import wn from './wn.png'
 
+export const images = {
+  br, bk, bn, bq, bp, bb,
+  wr, wb, wp, wk, wq, wn,
+}
+
 const Peices = () => {
-    const position = new Array(8).fill('').map(x=> new Array(8).fill(''))
-    position[0][0] = br
-    position[0][1] = bn
-    position[0][2] = bb
-    position[0][3] = bq
-    position[0][4] = bk
-    position[0][5] = bb
-    position[0][6] = bn
-    position[0][7] = br
+    const position = new Array(8).fill('').map(() => new Array(8).fill(''))
+    position[0] = [br, bn, bb, bq, bk, bb, bn, br]
+    
+    position[1].fill(bp)
+    position[6].fill(wp)
+    
+    position[7] = [wr, wn, wb, wq, wk, wb, wn, wr]
 
-    for(let i=0;i<8;i++){
-        position[1][i] = bp
-    }
-    for(let i=0;i<8;i++){
-        position[6][i] = wp
-    }
-
-    position[7][0] = wr
-    position[7][1] = wn
-    position[7][2] = wb
-    position[7][3] = wq
-    position[7][4] = wk
-    position[7][5] = wb
-    position[7][6] = wn
-    position[7][7] = wr
-
-    return <div className='peice'></div>
+    return position
 }
 
 export default Peices
